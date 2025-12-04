@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resultado - Exploração do Oceano</title>
+
+  <style>
+    :root{
+      --bg: #0b1b2a;
+      --bg-soft:#0f2436;
+      --text:#e8f1f8;
+      --muted:#b9d1e4;
+      --accent:#1ec1ff;
+      --accent-2:#00e0c7;
+      --card:#102739;
+      --shadow: 0 10px 30px rgba(0,0,0,.25);
+      --ring: 0 0 0 3px rgba(30,193,255,.35);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial;
+      background: radial-gradient(1200px 800px at 80% -10%, rgba(30,193,255,.15), transparent 60%),
+                  radial-gradient(1200px 800px at 0% 110%, rgba(0,224,199,.1), transparent 60%),
+                  var(--bg);
+      color:var(--text);
+      text-align:center;
+      padding: 3rem 1rem;
+    }
+
+    h1 {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 700;
+      margin-bottom: .3rem;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      -webkit-text-fill-color: transparent;
+    }
+
+    h2 {
+      font-size: clamp(1.4rem, 2.2vw, 2rem);
+      font-weight: 600;
+      margin: .5rem 0;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    .card {
+      display: inline-block;
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: var(--shadow);
+      max-width: 400px;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--ring), var(--shadow);
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: .75rem;
+      display: block;
+      margin: 0 auto 1.25rem auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,.3);
+    }
+
+    button {
+      padding: .75rem 1.5rem;
+      border: none;
+      border-radius: .75rem;
+      font-size: 1rem;
+      font-weight: 600;
+      background: linear-gradient(180deg, var(--accent), var(--accent-2));
+      color: #00121c;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      transition: transform .15s ease, filter .15s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.08);
+      box-shadow: var(--ring), var(--shadow);
+    }
+
+    footer {
+      margin-top: 3rem;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="fade-in show">
+    <h1>🌊 Emoção detectada:</h1>
+    <h2 id="emocaoTitle">Processando...</h2>
+    <p id="confTitle"></p>
+
+    <div class="card">
+      <img id="imagemEmocao" alt="Imagem relacionada à emoção" />
+      <button onclick="voltar()">Voltar</button>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Exploração do Oceano — Resultados do reconhecimento facial
+  </footer>
+
+  <script>
+    const imagensPorEmocao = {
+      feliz: [
+        'static/mar_feliz/1.png',
+        'static/mar_feliz/2.png'
+      ],
+      triste: [
+        'static/mar_triste/3.png',
+        'static/mar_triste/4.png'
+      ],
+      neutro: [
+        'static/mar_neutro/5.png',
+        'static/mar_neutro/6.png'
+      ]
+    };
+
+    const traducoes = {
+      happy: 'feliz',
+      sad: 'triste',
+      neutral: 'neutro',
+      angry: 'triste',
+      fearful: 'triste',
+      disgusted: 'triste',
+      surprised: 'feliz'
+    };
+
+    function getQueryParam(name) {
+      const params = new URLSearchParams(window.location.search);
+      return params.get(name);
+    }
+
+    function imagemAleatoria(lista) {
+      return lista[Math.floor(Math.random() * lista.length)];
+    }
+
+    const emocaoOriginal = getQueryParam('emocao') || 'neutral';
+    const conf = getQueryParam('conf') || '0';
+    const emocaoTraduzida = traducoes[emocaoOriginal] || 'nenhuma';
+
+    document.getElementById('emocaoTitle').innerText =
+      emocaoTraduzida.charAt(0).toUpperCase() + emocaoTraduzida.slice(1);
+
+    document.getElementById('confTitle').innerText =
+      `Confiança: ${conf}%`;
+
+    if (imagensPorEmocao[emocaoTraduzida] && imagensPorEmocao[emocaoTraduzida].length > 0) {
+      document.getElementById('imagemEmocao').src =
+        imagemAleatoria(imagensPorEmocao[emocaoTraduzida]);
+    } else {
+      document.getElementById('imagemEmocao').style.display = 'none';
+    }
+
+    function voltar() {
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>

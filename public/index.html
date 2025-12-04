@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+  <!-- SEO básico -->
+  <title>tartarugas marinhas — tartarugas marinhas</title>
+  <meta name="description" content="[[RESUMO_CURTO]]" />
+
+  <!-- Bibliotecas -->
+  <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.8.0/dist/tf.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header role="banner">
+    <div class="wrap">
+      <nav aria-label="Navegação principal">
+        <div class="brand" aria-label="Marca da página">
+          <span aria-hidden="true"></span>
+          <strong>Mar Profundo</strong>
+        </div>
+
+        <div class="nav-links" role="navigation">
+          <a href="#curiosidades">Curiosidades</a>
+          <a href="#fatos">Fatos</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#faq">FAQ</a>
+        </div>
+
+        <div class="controls">
+          <button id="toggleTheme" class="btn ghost" aria-pressed="false" aria-label="Alternar modo claro e escuro">🌙</button>
+          <button id="btnAbrirChatbot" class="btn" aria-label="Abrir chatbot">Abrir Chatbot</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" class="wrap" role="main">
+    <!-- HERO -->
+    <section class="hero fade-in" aria-labelledby="titulo-hero">
+      <div>
+        <!-- TODO: Substituir o TEMA_DO_PROJETO -->
+        <h1 id="titulo-hero">Vulcões submarinos</h1>
+        <!-- TODO: Substituir o SLOGAN_IMPACTANTE -->
+        <h2>Os vulcões submarinos</h2>
+        <!-- TODO: Substituir o RESUMO_CURTO -->
+        <p>Vulcões não são apenas vulcões, quer saber tudo oque eu sei sobre eles? esse é o site perfeito para isso!</p>
+
+        <div class="actions" role="group" aria-label="Ações principais">
+          <!-- Botão obrigatório: Reconhecimento Facial -->
+          <button id="abrirIA" class="btn" aria-label="Iniciar reconhecimento facial">
+            Reconhecimento Facial
+          </button>
+
+          <!-- Botão obrigatório: Abrir Chatbot (também no topo) -->
+          <button id="btnAbrirChatbotHero" class="btn ghost" aria-label="Abrir chatbot">
+            Abrir Chatbot
+          </button>
+        </div>
+      </div>
+      <div class="imgwrap" aria-hidden="false">
+        <!-- TODO: Substituir a URL_IMAGEM_HERO -->
+        <img src="https://img.odcdn.com.br/wp-content/uploads/2024/09/vulcao-submarino-1-1.jpg" alt="Imagem hero relacionada a [[TEMA_DO_PROJETO]]" />
+      </div>
+    </section>
+
+    <!-- CURIOSIDADES -->
+    <section id="curiosidades" aria-labelledby="titulo-curiosidades" class="fade-in">
+      <header>
+        <h2 id="titulo-curiosidades">Curiosidades sobre os vulcões</h2>
+        <p>Descobertas rápidas sobre o tema do fundo do mar.</p>
+      </header>
+      <ul class="facts-list" role="list">
+        <!-- TODO: Preencher de 3 a 5 curiosidades -->
+        <li><div class="text">curiosidade 1: aproximadamente 1.500 vulcões ativos do mundo está submersa nos oceanos, principalmente na região chamada Anel de Fogo do Pacífico. Essa área, que circunda o Oceano Pacífico, é conhecida por sua intensa atividade sísmica e vulcânica, causada pelo movimento das placas tectônicas. 
+        <li><div class="text">curiosidade 2: O maior vulcão submarino da Terra é o Maciço Tamu, um vulcão-escudo extinto localizado no noroeste do Oceano Pacífico. É um vulcão único e colossal, com um cume a cerca de 1.980 metros de profundidade e uma base a 6.400 metros, resultando em uma altura de aproximadamente 4.400 metros.  </div></li>
+        <li><div class="text">curiosidade 3: Erupções submarinas podem construir estruturas que chegam à superfície, criando novas ilhas. O vulcão Kavachi, por exemplo, já formou ilhas que desapareceram e reapareceram várias vezes</div></li>
+        <li><div class="text">curiosidade 4: Os montes submarinos criam um ambiente rico em vida, pois interrompem as correntes oceânicas, trazendo águas profundas e cheias de nutrientes para mais perto da superfície. </div></li>
+        <li><div class="text">curiosidade 5: A água, que pode estar em estado supercrítico em grandes profundidades, abafa o som da erupção, tornando difícil detectá-los com hidrofones. Além disso, a pressão da água suprime as erupções mais violentas. </div></li>
+      </ul>
+    </section>
+
+    <!-- FATOS/CIÊNCIA -->
+    <section id="fatos" aria-labelledby="titulo-fatos" class="fade-in">
+      <header>
+        <h2 id="titulo-fatos">Fatos e Ciência</h2>
+        <p>Três pontos científicos para entender melhor.</p>
+      </header>
+      <div class="cards" role="list">
+        <!-- TODO: Preencher os cards com fatos -->
+        <article class="card" aria-label="Fato científico 1" role="listitem">
+          <h3>Potencial para "lavas em almofada"</h3>
+          <p> A rápida refrigeração do magma pela água faz com que ele se solidifique em uma estrutura peculiar chamada "lavas em almofada", que se assemelham a almofadas empilhadas. </p>
+        </article>
+
+        <article class="card" aria-label="Fato científico 2" role="listitem">
+          <h3>A maioria é desconhecida</h3>
+          <p> Acredita-se que existam mais de um milhão de vulcões submarinos, mas a maioria não foi mapeada ou estudada devido à dificuldade de monitoramento em grandes profundidades. </p>
+        </article>
+
+        <article class="card" aria-label="Fato científico 3" role="listitem">
+          <h3>Importância para o clima</h3>
+          <p>Vulcões submarinos desempenham um papel crucial no ciclo de nutrientes e no clima da Terra, fornecendo ferro que alimenta o fitoplâncton, que por sua vez absorve gás carbônico dos oceanos. </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section id="galeria" aria-labelledby="titulo-galeria" class="fade-in">
+      <header>
+        <h2 id="titulo-galeria">Galeria</h2>
+        <p>Imagens relacionadas ao tema com pequenas legendas.</p>
+      </header>
+
+      <div class="gallery" role="list">
+        <!-- TODO: Adicionar de 3 a 6 imagens na galeria. Duplique/remova figuras conforme necessário. -->
+        <figure role="listitem">
+          <img src="https://realtime1.com.br/wp-content/uploads/2023/09/SEI_110031985.webp" alt="Foto 1 relacionada a Vulcões submarinos" />
+          <figcaption> </figcaption>
+        </figure>
+        <figure role="listitem">
+          <img src="https://g1.globo.com/Noticias/Ciencia/foto/0,,38196814-FMM,00.jpg" alt="Foto 2 relacionada a Vulcões submarinos" />
+          <figcaption> </figcaption>
+        </figure>
+        <figure role="listitem">
+          <img src="https://storage.googleapis.com/media-cloud-na/2025/08/volcan-submarino-scaled.jpeg.webp" alt="Foto 3 relacionada a Vulcões submarinos]" />
+          <figcaption> </figcaption>
+        </figure>
+        <figure role="listitem">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSgOaVXtGKbPsgJKIXfS2RSjJaFk-2Rtf4-Q&s" alt="Foto 4 relacionada a Vulcões submarinos" />
+          <figcaption> </figcaption>
+        </figure>
+        <figure role="listitem">
+          <img src="https://vstatic.vietnam.vn/vietnam/resource/IMAGE/2025/9/15/f6ccabdf8d27497184a1a9f2e41b1419" alt="Foto 5 relacionada a Vulcões submarinos" />
+          <figcaption> </figcaption>
+        </figure>
+        <figure role="listitem">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2JEqzZ7kMQoVQ9bAV3kUuvpqTirWZ5Agokg&s" alt="Foto 6 relacionada a Vulcões submarinos" />
+          <figcaption> </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" aria-labelledby="titulo-faq" class="fade-in">
+      <header>
+        <h2 id="titulo-faq">Perguntas Frequentes</h2>
+        <p>Respostas rápidas sobre o projeto e o tema.</p>
+      </header>
+
+      <div class="faq">
+        <!-- TODO: Ajustar perguntas/respostas conforme o tema -->
+        <details>
+          <summary>qual é o maior vulcão submarino que existe?</summary>
+          <p>O maior vulcão submarino do mundo é o Maciço Tamu, ele tem mais ou menos 4.400 metros</p>
+        </details>
+        <details>
+          <summary>onde os vulcões submarinos são encontrados?</summary>
+          <p>Eles se localizam principalmente em áreas de alta atividade tectônica, como nas dorsais meso-oceânicas, onde as placas tectônicas se separam e criam nova crosta oceânica. Podem também ser encontrados em zonas de subducção e em pontos quentes (hotspots) no meio de placas tectônicas</p>
+        </details>
+        <details>
+          <summary>Como eles são formados?</summary>
+          <p>Os vulcões submersos se formam a partir do movimento das placas tectônicas. O magma do interior da Terra sobe através de rachaduras na crosta oceânica, solidifica-se ao entrar em contato com a água e, com o tempo, acumula-se, formando montanhas submersas, chamadas de montes submarinos. </p>
+        </details>
+        <details>
+          <summary>onde encontro informações adicionais sobre os vulcões submarinos?</summary>
+          <p>Simplismente não sei, mas eu recomendo vocé procurar no google mais informações sobre vulcões submarinos</a>.</p>
+        </details>
+        <details>
+          <summary>Como uma erupção submersa difere de uma erupção terrestre?</summary>
+          <p>A principal diferença é a pressão da água. Em grandes profundidades, a pressão impede a erupção explosiva de gases, tornando-a mais efusiva (contínua). O rápido resfriamento pela água faz com que a lava se solidifique rapidamente, formando "lavas em almofada", de formato arredondado. Em águas rasas, a erupção pode ser mais explosiva, lançando rochas e vapor para fora da água. </p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section id="cta-final" aria-labelledby="titulo-cta" class="fade-in">
+      <header>
+        <h2 id="titulo-cta">Continue explorando</h2>
+        <p>Escolha um caminho para aprender ainda mais.</p>
+      </header>
+      <div class="cta" role="group" aria-label="Call to Action">
+        <a href="#fatos">Aprender mais</a>
+        <a href="#galeria">Ver imagens</a>
+        <a href="#creditos">Baixar material &amp; Fontes</a>
+      </div>
+    </section>
+    
+    <!-- CTA FINAL -->
+    <section id="cta-final" aria-labelledby="titulo-cta" class="fade-in">
+      <header>
+        <h2 id="titulo-cta">Continue explorando</h2>
+        <p>Escolha um caminho para aprender ainda mais.</p>
+      </header>
+      <div class="cta" role="group" aria-label="Call to Action">
+        <a href="#fatos">Aprender mais</a>
+        <a href="#galeria">Ver imagens</a>
+        <a href="#creditos">Baixar material &amp; Fontes</a>
+      </div>
+    </section>
+
+    <!-- CRÉDITOS/FONTES -->
+    <section id="creditos" aria-labelledby="titulo-creditos" class="fade-in">
+      <header>
+        <h2 id="titulo-creditos">Créditos e Fontes</h2>
+        <p>Referências utilizadas neste projeto.</p>
+      </header>
+      <!-- TODO: Inserir links ou nomes das fontes -->
+      <article>
+        <p>[[FONTES_REFERENCIAS]]</p>
+      </article>
+    </section>
+  </main>
+
+  <!-- Painel do Chatbot (Aside fixo) -->
+  <aside id="chatPane" role="complementary" aria-label="Painel do chatbot" aria-hidden="true">
+    <div class="chat-header">
+      <strong>Chatbot Demonstrativo</strong>
+      <div>
+        <button id="closeChat" class="icon-btn" aria-label="Fechar chatbot">✖</button>
+      </div>
+    </div>
+    <div class="chat-body" id="chatHistory" aria-live="polite">
+      <!-- Placeholders de histórico -->
+      <div class="msg bot">Olá! Sou um protótipo de chatbot. Como posso ajudar sobre [[TEMA_DO_PROJETO]]?</div>
+      <div class="msg user">Quero saber curiosidades rápidas.</div>
+      <div class="msg bot">Veja a seção “Curiosidades” ou pergunte algo específico!</div>
+    </div>
+    <form class="chat-input" id="chatForm" aria-label="Entrada de mensagem do chatbot">
+      <input id="chatText" type="text" name="q" placeholder="Digite sua mensagem..." aria-label="Escreva sua mensagem" />
+      <button class="icon-btn" type="submit" aria-label="Enviar mensagem">➤</button>
+    </form>
+  </aside>
+
+  <footer class="wrap" role="contentinfo">
+    <p>&copy; <span id="ano"></span> | Projeto: [[TEMA_DO_PROJETO]] — <a href="#topo" id="backToTop">Voltar ao topo</a></p>
+  </footer>
+<script src="script.js"></script>
+
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
+<df-messenger
+  intent="WELCOME"
+  chat-title="ECOBOT"
+  agent-id="6c106d6c-eef7-41db-92b4-5bf82848937e"
+  language-code="pt-br">
+</df-messenger>
+
+
+<!-- Modal da câmera -->
+<div id="cameraModal" class="modal" aria-hidden="true" style="display:none;">
+  <div class="modal-content">
+    <button id="fecharModal" class="botao-fechar" title="Fechar">❌</button>
+    <h2 class="modal-title">Reconhecimento Facial</h2>
+    <div class="video-wrap">
+      <video id="video" autoplay muted playsinline></video>
+    </div>
+    <div class="controls">
+      <button id="tirarFoto" class="botao-foto" title="Tirar foto">📸</button>
+    </div>
+    <p id="modalStatus" class="modal-status">Aguardando...</p>
+    <canvas id="fotoCanvas" style="display:none;"></canvas>
+  </div>
+</div>
+
+</body>
+</html>
+
